@@ -81,7 +81,7 @@ def predict():
 
         return jsonify({
             'status': 'success',
-            'prediction': 'True News' if prediction == 1 else 'True News',  #here fake == true;
+            'prediction': 'True News' if prediction == 1 else 'False News',  #here fake == true;
             'confidence': confidence,
             'text': text[:200] + '...' if len(text) > 200 else text
         })
