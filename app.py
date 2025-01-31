@@ -26,6 +26,24 @@ def wordopt(text):
     text = re.sub('\w*\d\w*', '', text)
     return text
 
+# import requests
+
+# # NEWS_API_KEY = "d4c96b43d3c04883a2790bd6c78d0117"  # Replace with your API key
+# # NEWS_API_URL = "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + NEWS_API_KEY
+
+# @app.route('/get_news', methods=['GET'])
+# def get_news():
+#     try:
+#         response = requests.get(NEWS_API_URL)
+#         news_data = response.json()
+#         if news_data["status"] == "ok":
+#             articles = news_data.get("articles", [])
+#             return jsonify({"status": "success", "articles": articles})
+#         else:
+#             return jsonify({"status": "error", "message": "Failed to fetch news"})
+#     except Exception as e:
+#         return jsonify({"status": "error", "message": f"Error fetching news: {str(e)}"})
+
 
 @app.route('/')
 def home():
